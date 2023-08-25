@@ -1,1 +1,2 @@
-export const routes = 'routes'
+export { routerStories } from './stories'
+export { routerUsers } from './users'
