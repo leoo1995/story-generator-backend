@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import { authenticateUser, createUser } from '@controllers/users'
+import { authMiddleware } from 'src/middlewares'
 
 const routerUsers = Router()
 
@@ -15,6 +16,6 @@ routerUsers.get('/:id', (req, res) => {
 })
 routerUsers.post('/create', createUser)
 
-routerUsers.post('/authenticate', authenticateUser)
+routerUsers.post('/authenticate', ...authMiddleware, authenticateUser)
 
 export { routerUsers }
