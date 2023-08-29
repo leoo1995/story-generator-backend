@@ -7,5 +7,11 @@ export interface IUser {
   createdAt?: Date
 }
 
-// export type UserDocument = Document<IUser>
-// UserDocument['']
+export interface IStory {
+  content: string
+  title: string
+  keywords: string
+  genre: string
+  desiredWordCount: number
+  createdAt?: string
+}
